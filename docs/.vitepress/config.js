@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/hb4dsai/',
   title: 'HB4DSAI',
   description: 'Handbook for Data Science and Artifitial Intelligence',
   lang: 'zh-CN',
