@@ -26,6 +26,6 @@ jobs:
            git init
            git add -A
            git commit -m 'deploy'
-           git push -f https://github.com/tswsxk/hb4dsai.git master:gh-pages
+           git push -f https://x-access-token:${{ secrets.AUTOPAGE }}@github.com/tswsxk/hb4dsai.git master:gh-pages
 
 
