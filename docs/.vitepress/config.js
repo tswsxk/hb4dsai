@@ -1,14 +1,8 @@
-const addtional_head = [
-  ['link', { rel: 'stylesheet', href: `https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css` }]
-]
-
-
 module.exports = {
   title: 'HB4DSAI',
   description: 'Handbook for Data Science and Artifitial Intelligence',
   lang: 'zh-CN',
-  head: addtional_head,
-
+  head: [['link', {'rel': 'stylesheet', 'href': `https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css`}]],
   themeConfig: {
     repo: 'https://github.com/tswsxk/hb4dsai',
     editLinks: true,
@@ -47,12 +41,16 @@ module.exports = {
         activeMatch: '^/cheatsheet/',
      },
     ],
-    sidebar: {
-    },
   },
   markdown: {
     config: (md) => {
-      md.use(require("markdown-it-katex"));
+      md.use(require("markdown-it-katex"))
+      const REG_MATH_MUSTACHE_TAG = /<span class="katex">/g
+      const replacer = '<span v-pre class="katex">'
+      const originalRender = md.render
+      md.render = function () {
+        return originalRender.apply(this, arguments).replace(REG_MATH_MUSTACHE_TAG, replacer)
+      }
     },
   }
 }
