@@ -1,0 +1,23 @@
+{
+  "name": "hb4dsai",
+  "version": "1.0.0",
+  "description": "Handbook for Data Science and Artifitial Intelligence",
+  "main": "index.js",
+  "repository": "https://github.com/tswsxk/hb4dsai",
+  "author": "Shiwei Tong",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@iktakahiro/markdown-it-katex": "^4.0.1",
+    "markdown-it-katex": "^2.0.3",
+    "vitepress": "^0.22.3"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "katex": "^0.15.3"
+  }
+}

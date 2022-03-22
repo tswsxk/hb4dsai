@@ -1,0 +1,4 @@
+2022.03.22 to support formula: 
+- https://github.com/vuejs/vitepress/issues/229
+- https://github.com/Maorey/Blog/blob/master/docs/.vitepress/config.js
+- https://github.com/vuejs/vitepress/issues/529
