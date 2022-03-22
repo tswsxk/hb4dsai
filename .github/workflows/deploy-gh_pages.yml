@@ -21,8 +21,8 @@ jobs:
            GITHUB_TOKEN: ${{ secrets.AUTOPAGE }}
       run: |
            cd docs/.vitepress/dist
-           git config user.name "GitHub Actions Bot"
-           git config user.email "<>"
+           git config --global user.name "GitHub Actions Bot"
+           git config --global user.email "<>"
            git init
            git add -A
            git commit -m 'deploy'
