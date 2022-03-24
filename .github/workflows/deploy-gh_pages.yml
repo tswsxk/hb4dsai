@@ -9,21 +9,23 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Use Node.js
-       uses: actions/setup-node@v2
-       with:
+      uses: actions/setup-node@v2
+      with:
           node-version: '14.x'
     - name: Install
-       run: yarn install
+      run: yarn install
     - name: Build
-       run: yarn docs:build
+      run: yarn docs:build
     - name: Deploy
       env:
            GITHUB_TOKEN: ${{ secrets.AUTOPAGE }}
       run: |
            cd docs/.vitepress/dist
+           git config --global user.name "GitHub Actions Bot"
+           git config --global user.email "<>"
            git init
            git add -A
            git commit -m 'deploy'
-           git push -f https://github.com/tswsxk/hb4dsai.git master:gh-pages
+           git push -f https://x-access-token:${{ secrets.AUTOPAGE }}@github.com/tswsxk/hb4dsai.git master:gh-pages
 
 
