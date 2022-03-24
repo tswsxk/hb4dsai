@@ -1,3 +1,15 @@
+2022.03.23 encounted wrong indents
+- https://github.com/vuejs/vitepress/issues/563
+- https://github.com/vuejs/vitepress/issues/482
+- https://github.com/vuejs/vitepress/pull/565
+
+2022.03.23 to support content search
+- suspended: https://github.com/vuejs/vitepress/issues/316
+
+2022.03.22 to support automatically build for github pages with automatically git push
+- action yml for nodejs: https://docs.github.com/cn/actions/automating-builds-and-tests/building-and-testing-nodejs-or-python#example-using-yarn
+- git push in github action: https://stackoverflow.com/questions/57921401/push-to-origin-from-github-action
+
 2022.03.22 to support formula: 
 - https://github.com/vuejs/vitepress/issues/229
 - https://github.com/Maorey/Blog/blob/master/docs/.vitepress/config.js
